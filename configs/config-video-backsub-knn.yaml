@@ -1,0 +1,20 @@
+controller:
+  batch: 10
+
+reader:
+  init:
+    name: "opencv-video"
+    video: "rtsp://EDS:RjB3iLdac8uio4t34@kraz-s-videor01:555/369?stream_id=369.1"
+saver:
+  init:
+    name: "opencv"
+    path_to_save: "./data/streamv3_knn"
+    make_dirs: True
+    ext: 'png'
+    need_save: True    
+search_engine:
+  init:
+    name: "back-sub"
+    threshold: 0.1
+    type_background_substractor: "knn"
+    

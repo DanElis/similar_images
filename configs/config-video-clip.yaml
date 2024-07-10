@@ -1,0 +1,21 @@
+controller:
+  batch: 10
+
+reader:
+  init:
+    name: "opencv-video"
+    video: 
+    path_dir: "../data/stream3_v3"
+saver:
+  init:
+    name: "pil"
+    path_to_save: "./data/test"
+    make_dirs: True
+    ext: 'png'
+    need_save: True    
+search_engine:
+  init:
+    name: "clip"
+    threshold: 0.95
+    model_id: "openai/clip-vit-base-patch32"
+    device: "cuda"
